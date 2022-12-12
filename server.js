@@ -12,17 +12,12 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use(express.static('public')) // forces external files to be inside /public
 
-
-////////////////////////////////////////////////
-/*
-	request to home page
-*/
-
-
-
-
 app.get('/', function(req,res){
-    res.sendFile('views/home.html',{root: __dirname })
+    res.sendFile('data/hello_world.json',{root: __dirname })
+})
+
+app.get('/a',function(req,res){
+    res.sendFile('data/nothing.json',{root: __dirname })
 })
 
 app.get('/close',function(req,res){
