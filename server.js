@@ -16,7 +16,7 @@ app.get('/', function(req,res){
     res.sendFile('data/hello_world.json',{root: __dirname })
 })
 
-app.get('/a',function(req,res){
+app.get('/notice/:id/*',function(req,res){
     res.sendFile('data/nothing.json',{root: __dirname })
 })
 
